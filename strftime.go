@@ -132,6 +132,24 @@ func Strftime(t time.Time, f string) (string, error) {
 					add(fmt.Sprintf("%2d", t.Day()))
 				case 'f':
 					add(fmt.Sprintf("%09d", t.Nanosecond()))
+/* timeshift modifications begin */
+				case '1':
+					add(fmt.Sprintf("%01d", t.Nanosecond()))
+				case '2':
+					add(fmt.Sprintf("%02d", t.Nanosecond()))
+				case '3':
+					add(fmt.Sprintf("%03d", t.Nanosecond()))
+				case '4':
+					add(fmt.Sprintf("%04d", t.Nanosecond()))
+				case '5':
+					add(fmt.Sprintf("%05d", t.Nanosecond()))
+				case '6':
+					add(fmt.Sprintf("%06d", t.Nanosecond()))
+				case '7':
+					add(fmt.Sprintf("%07d", t.Nanosecond()))
+				case '8':
+					add(fmt.Sprintf("%08d", t.Nanosecond()))
+/* timeshift modifications end   */
 				case 'F':
 					add(fmt.Sprintf("%04d-%02d-%02d", t.Year(), t.Month(), t.Day()))
 				case 'H':

@@ -263,6 +263,185 @@ label:
 
 			break;
 
+/* timeshift modifications begin */
+
+		case '1':
+		    /* timeshift extension: truncated nanoseconds */
+			if (!isdigit_l((unsigned char)*buf, locale))
+				return (NULL);
+
+			len = 1;
+			for (i = 0; len && *buf != 0 &&
+			     isdigit_l((unsigned char)*buf, locale); buf++){
+				i *= 10;
+				i += *buf - '0';
+				len--;
+			}
+			while (len) {
+			    i *= 10;
+			    len--;
+			}
+
+			tm->tm_nsec = i;
+
+			break;
+
+
+		case '2':
+		    /* timeshift extension: truncated nanoseconds */
+			if (!isdigit_l((unsigned char)*buf, locale))
+				return (NULL);
+
+			len = 2;
+			for (i = 0; len && *buf != 0 &&
+			     isdigit_l((unsigned char)*buf, locale); buf++){
+				i *= 10;
+				i += *buf - '0';
+				len--;
+			}
+			while (len) {
+			    i *= 10;
+			    len--;
+			}
+
+			tm->tm_nsec = i;
+
+			break;
+
+
+		case '3':
+		    /* timeshift extension: truncated nanoseconds */
+			if (!isdigit_l((unsigned char)*buf, locale))
+				return (NULL);
+
+			len = 3;
+			for (i = 0; len && *buf != 0 &&
+			     isdigit_l((unsigned char)*buf, locale); buf++){
+				i *= 10;
+				i += *buf - '0';
+				len--;
+			}
+			while (len) {
+			    i *= 10;
+			    len--;
+			}
+
+			tm->tm_nsec = i;
+
+			break;
+
+
+		case '4':
+		    /* timeshift extension: truncated nanoseconds */
+			if (!isdigit_l((unsigned char)*buf, locale))
+				return (NULL);
+
+			len = 4;
+			for (i = 0; len && *buf != 0 &&
+			     isdigit_l((unsigned char)*buf, locale); buf++){
+				i *= 10;
+				i += *buf - '0';
+				len--;
+			}
+			while (len) {
+			    i *= 10;
+			    len--;
+			}
+
+			tm->tm_nsec = i;
+
+			break;
+
+
+		case '5':
+		    /* timeshift extension: truncated nanoseconds */
+			if (!isdigit_l((unsigned char)*buf, locale))
+				return (NULL);
+
+			len = 5;
+			for (i = 0; len && *buf != 0 &&
+			     isdigit_l((unsigned char)*buf, locale); buf++){
+				i *= 10;
+				i += *buf - '0';
+				len--;
+			}
+			while (len) {
+			    i *= 10;
+			    len--;
+			}
+
+			tm->tm_nsec = i;
+
+			break;
+
+
+		case '6':
+		    /* timeshift extension: truncated nanoseconds */
+			if (!isdigit_l((unsigned char)*buf, locale))
+				return (NULL);
+
+			len = 6;
+			for (i = 0; len && *buf != 0 &&
+			     isdigit_l((unsigned char)*buf, locale); buf++){
+				i *= 10;
+				i += *buf - '0';
+				len--;
+			}
+			while (len) {
+			    i *= 10;
+			    len--;
+			}
+
+			tm->tm_nsec = i;
+
+			break;
+
+
+		case '7':
+		    /* timeshift extension: truncated nanoseconds */
+			if (!isdigit_l((unsigned char)*buf, locale))
+				return (NULL);
+
+			len = 7;
+			for (i = 0; len && *buf != 0 &&
+			     isdigit_l((unsigned char)*buf, locale); buf++){
+				i *= 10;
+				i += *buf - '0';
+				len--;
+			}
+			while (len) {
+			    i *= 10;
+			    len--;
+			}
+
+			tm->tm_nsec = i;
+
+			break;
+
+
+		case '8':
+		    /* timeshift extension: truncated nanoseconds */
+			if (!isdigit_l((unsigned char)*buf, locale))
+				return (NULL);
+
+			len = 8;
+			for (i = 0; len && *buf != 0 &&
+			     isdigit_l((unsigned char)*buf, locale); buf++){
+				i *= 10;
+				i += *buf - '0';
+				len--;
+			}
+			while (len) {
+			    i *= 10;
+			    len--;
+			}
+
+			tm->tm_nsec = i;
+
+			break;
+
+/* timeshift modifications end   */
+
 		case 'M':
 		case 'S':
 			if (*buf == 0 ||
